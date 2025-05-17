@@ -2,7 +2,13 @@
 'use strict'; // to make sure we will not leak variables into global scope
 
 angular.module('myFirstApp', [])
-.controller('MyFirstController', function() { // this is a ViewModel
+// this binds the ViewModel to the View
+.controller('MyFirstController', function($scope) { // this is a ViewModel
+    $scope.name = "John Doe";
+    $scope.sayHello = function() {
+        return "Hello " + $scope.name + "!";
+    }
+
 
 });
 })();
