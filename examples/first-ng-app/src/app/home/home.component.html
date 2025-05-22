@@ -1,3 +1,11 @@
 <p>Home component starts from here!</p>
+<input type="text" (keyup)="keyUpHandler()">
 
 <app-greeting [message]="homeMessage()"/>
+<br><br/>
+<p>name</p>
+<input type="text" (keydown)="keyDownHandler($event)">
+
+
+
+
