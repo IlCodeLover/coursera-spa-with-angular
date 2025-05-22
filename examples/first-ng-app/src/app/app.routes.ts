@@ -13,4 +13,10 @@ export const routes: Routes = [{
         return import('./todos/todos.component').then((m) => m.TodosComponent);
     }
 
+}, {
+
+    path: 'reviews', 
+    loadComponent: () => {
+        return import('./reviews/reviews.component').then((m) => m.ReviewsComponent);
+    }
 }];
