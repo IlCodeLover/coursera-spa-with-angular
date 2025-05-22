@@ -5,5 +5,12 @@ export const routes: Routes = [{
     pathMatch: 'full', // match the full path
     loadComponent: () => {
         return import('./home/home.component').then((m) => m.HomeComponent);
+    },
+}, {
+
+    path: 'todos',
+    loadComponent: () => {
+        return import('./todos/todos.component').then((m) => m.TodosComponent);
     }
+
 }];
