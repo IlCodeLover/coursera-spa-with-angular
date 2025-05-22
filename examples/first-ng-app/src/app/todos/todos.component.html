@@ -1,1 +1,13 @@
 <p>todos works!</p>
+<p>{{ todoService.todoItems }}</p>
+
+<p>Todo items (without signal):</p>
+<p>{{ todoService.todoItems[0].title }}</p>
+
+<p> Todo items (with signal)</p>
+<p>{{ todoItems()[0].title }}</p>
+
+<p>Show all items (for loop)</p>
+@for (todo of todoItems(); track todo.id) {
+    <p> {{ todo.title }}</p>
+}
