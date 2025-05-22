@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, signal } from '@angular/core';
+import { GreetingComponent } from '../components/greeting/greeting.component';
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [GreetingComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  // define a signal to hold the message and pass it to its child component
+  homeMessage = signal("Greeting is initialized in home component.")
 
 }
