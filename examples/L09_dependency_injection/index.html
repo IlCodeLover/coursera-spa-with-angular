@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+  <head>
+    <meta charset="UTF-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Title</title>
+  </head>
+  <body>
+    <div ng-controller="Controller1">
+      <h2> Using $scope to bind data from VM and View </h2>
+        <p>{{ message }}</p>
+        <p>{{ printMessage() }}</p>
+
+      <h2> Binding a DOM element into ViewModel without using Id</h2>
+      <!-- Angular (two-way binding with ngModel) -->
+      <input type="text" id="myMessageId" ng-model="message">
+      <p> Inside my scope, the message is auto sync: {{ message }} </p>
+      <p> Get message by id: </p>
+      <button onclick="myFunction()"> Get message by id </button>
+      <p id="displayMessage"></p>
+
+      
+    </div>
+    <div ng-controller="Controller2">
+      <h2> Binding event to $scope</h2>
+      <p> Show the message in the text box in captitalized</p>
+      <input type="text" ng-model="country" 
+          ng-blur="upper();">
+      <p> Capitalized message: {{ country }}</p>
+    </div>
+
+  </body>
+</html>
+
+<script>
+  function myFunction() {
+  var userMessage = document.getElementById("myMessageId").value;
+  document.getElementById("displayMessage").innerHTML = userMessage;
+  }
+
+</script>
