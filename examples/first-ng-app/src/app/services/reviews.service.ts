@@ -14,7 +14,7 @@ export class ReviewsService {
   // Initializing review data from API call
   
   getReviewsFromAPI() {
-    const url = 'https://jsonplaceholder.typicode.com/posts';
+    const url = 'https://jsonplaceholder.typicode.com/todos';
     return this.http.get<Array<Review>>(url);
   }
 }
