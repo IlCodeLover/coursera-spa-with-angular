@@ -1,0 +1,18 @@
+<html ng-app="MinificationExample">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minification Example</title>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="MinificationController">
+            <h1>Minification Example</h1>
+            <label for="name">Enter your name:</label>
+            <input type="text" ng-model="name" ng-blur="upper()">  
+            <p>Your name is: {{ name }}</p>
+        </div>
+        
+        
+    </body>
+</html>
