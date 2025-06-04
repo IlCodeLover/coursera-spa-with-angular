@@ -1,0 +1,23 @@
+<html ng-app="myAngularApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="IlCodeLover">
+        <title>Using filter to format data</title>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="FilterController">
+            <h1> Using filter to format data </h1>
+            <label for="name"> Input your name</label>
+            <input type="text" ng-model="name" ng-blur="upper();">
+            <p>Hello, {{ name }}!</p>
+            <button class="btn btn-default" ng-click="changeMood();">Change Mood</button>"
+            <br>
+            <image ng-src="./images/status_{{stateOfBeing}}.png" width="200" height="200" alt="Status Photo">
+            <p>Your current mood is: {{ stateOfBeing | uppercase }}</p>
+
+            <p> The service cost is: {{ cost | currency: "£" : 5}}</p>
+        </div>
+    </body>
+</html>
