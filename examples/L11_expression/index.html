@@ -1,0 +1,22 @@
+<html ng-app="showImageApp">
+    <head>
+        <meta charset="UTF-8">
+        <title> Using expression to display different images</title>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="ImageController">
+            <h1>Using expression to display different images</h1>
+            <label for="name">Input your name</label>
+            <input type=" text" ng-model="name">
+            <br>
+            <p>Hello {{ name }}!</p>
+            <button class="btn btn-default" ng-click="changeItem();">Change Item</button>
+            <br>
+            <img ng-src="images/fruit_{{item}}.png" width="200" height="200" alt="Fruit Image">
+            <p> Your {{ item }} is selected!</p>
+            
+        </div>
+    </body>
+</html>
