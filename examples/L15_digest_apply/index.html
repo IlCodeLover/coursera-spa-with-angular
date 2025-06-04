@@ -1,0 +1,45 @@
+<html ng-app="DemoApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="IlCodeLover">
+        <title>Using $digest and $apply</title>
+        <style>
+            body {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: medium;
+            }
+            h1 {
+                color: blue;
+            }
+            label {
+                font-weight: bold;
+            }
+        </style>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div ng-controller="DigestController">
+            <h1>Using digest and apply</h1>
+            <div>
+                
+                <button class="btn btn-default" ng-click="countUp();">Increment Product</button>
+            </div>
+            <br>
+            <div>
+                <button class="btn btn-default" ng-click="doubleWithApply();">Double Count</button>
+            </div>
+            <div>
+                <p> The interpolation is not updated if we use timeout outside of Angular context</p>
+                <p>Current Count Up: {{ count }}</p> 
+            </div>
+            <div>
+                <button class="btn btn-default" ng-click="countDown();">Decrement Bag</button>
+            </div>
+            <div>
+                <p>Decrease Bags: {{ bag }}</p>
+            </div>
+            
+        </div>
+    </body>
+</html>
